@@ -4,8 +4,9 @@
     <dimen name="telefono_contacto">20sp</dimen>
     <dimen name="top">20dp</dimen>
     <dimen name="left">10dp</dimen>
-    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">5dp</dimen>
     <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="imagen_contacto_margen">15dp</dimen>
     <dimen name="carview_corner_radius">4dp</dimen>
     <dimen name="nombre_cardview">20sp</dimen>
 </resources>

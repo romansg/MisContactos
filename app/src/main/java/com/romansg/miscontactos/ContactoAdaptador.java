@@ -3,9 +3,11 @@ package com.romansg.miscontactos;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,8 +31,11 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
 
     @Override
     public ContactoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_contacto, parent, false);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        //View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_contacto, parent, false);
+        View v = inflater.inflate(R.layout.cardview_contacto, parent, false);
 
+        Log.i("MisContactos", "OnCreateViewHolder");
         return new ContactoViewHolder(v);
     }
 
@@ -54,6 +59,13 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
                 activity.startActivity(intent);
             }
         });
+
+        holder.btnLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(activity, "Diste like a " + contacto.getNombre(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -65,6 +77,7 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
         private ImageView imgFoto;
         private TextView tvNombreCV;
         private TextView tvTelefonoCV;
+        private ImageButton btnLike;
 
         public ContactoViewHolder(View itemView) {
             super(itemView);
@@ -72,6 +85,7 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
             imgFoto = itemView.findViewById(R.id.imgFoto);
             tvNombreCV = itemView.findViewById(R.id.tvNombreCV);
             tvTelefonoCV = itemView.findViewById(R.id.tvTelefonoCV);
+            btnLike = itemView.findViewById(R.id.btnLike);
         }
     }
 }

@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         contactos.add(new Contacto(R.drawable.robot, "Rosa", "5510683659", "rosa@gamil.com"));
         contactos.add(new Contacto(R.drawable.mushroom, "Fito", "2288334684", "fito@gmail.com"));
         contactos.add(new Contacto(R.drawable.hot_chili, "Bruno", "56668011","bruno@gmail.com"));
+        contactos.add(new Contacto(R.drawable.freaky_head, "Guest", "666","guest@gmail.com"));
     }
 
     public void inicializarAdaptador() {
