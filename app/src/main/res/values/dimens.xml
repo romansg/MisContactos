@@ -9,4 +9,5 @@
     <dimen name="imagen_contacto_margen">15dp</dimen>
     <dimen name="carview_corner_radius">4dp</dimen>
     <dimen name="nombre_cardview">20sp</dimen>
+    <dimen name="elevacion_appbar">4dp</dimen>
 </resources>

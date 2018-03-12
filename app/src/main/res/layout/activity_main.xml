@@ -6,8 +6,24 @@
     android:layout_height="match_parent"
     tools:context="com.romansg.miscontactos.MainActivity">
 
+    <include
+        android:id="@+id/miActionBar"
+        layout="@layout/actionbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rvContactos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </include>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvContactos"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miActionBar" />
 </android.support.constraint.ConstraintLayout>

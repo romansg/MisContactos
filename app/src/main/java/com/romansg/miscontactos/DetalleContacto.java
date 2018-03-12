@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 
 public class DetalleContacto extends AppCompatActivity {
     TextView tvNombre;
@@ -20,6 +21,9 @@ public class DetalleContacto extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_contacto);
+
+        Toolbar miActionbar = findViewById(R.id.miActionBarDetalle);
+        setSupportActionBar(miActionbar);
 
         Bundle parametros = getIntent().getExtras();
         String nombre = parametros.getString(getResources().getString(R.string.pnombre));
