@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar miActionBar = findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
 
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         rvContactos = findViewById(R.id.rvContactos);
 
         /*LinearLayoutManager llm = new LinearLayoutManager(this);

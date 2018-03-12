@@ -25,6 +25,8 @@ public class DetalleContacto extends AppCompatActivity {
         Toolbar miActionbar = findViewById(R.id.miActionBarDetalle);
         setSupportActionBar(miActionbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Bundle parametros = getIntent().getExtras();
         String nombre = parametros.getString(getResources().getString(R.string.pnombre));
         String telefono = parametros.getString(getResources().getString(R.string.ptelefono));
